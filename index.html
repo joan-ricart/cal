@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script defer src="./dist/index.js"></script>
+  </head>
+  <body>
+    <h1>Calendar</h1>
+    <div id="cal"></div>
+    <style>
+      body {
+        margin: 0;
+        font-family: sans-serif;
+      }
+      #cal {
+        border: 1px solid red;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+      }
+      .cal-month {
+        padding: 1rem;
+      }
+      .cal-month-name {
+        padding: 0.5rem;
+        text-align: center;
+        font-weight: bold;
+      }
+      .cal-day-names {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+      }
+      .cal-day-name {
+        padding: 0.5rem;
+        text-align: center;
+        font-weight: bold;
+        font-size: 0.85rem;
+      }
+      .cal-grid {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+      }
+      .cal-day {
+        aspect-ratio: 4/3;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0.5rem;
+        border: 1px solid lightgray;
+      }
+      .cal-day--selected {
+        background-color: lightcoral;
+      }
+      .cal-day--preselected {
+        background-color: pink;
+      }
+    </style>
+  </body>
+</html>
