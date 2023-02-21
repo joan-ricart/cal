@@ -4,8 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npx tsc --watch"
+    "dev": "concurrently \"pnpm run tsc-watch\" \"pnpm run sass-watch\"",
+    "tsc-watch": "npx tsc --watch",
+    "sass-watch": "npx sass ./src/styles.scss ./dist/styles.css --watch --poll"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.14.0",
+    "concurrently": "^7.6.0",
+    "sass": "^1.58.3",
+    "typescript": "^4.9.5"
+  }
 }

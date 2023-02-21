@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+#cal {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  padding: 1rem;
+}
+.cal-month {
+  border: 1px solid black;
+}
+.cal-month-name {
+  padding: 0.5rem;
+  text-align: center;
+  font-weight: bold;
+  text-transform: capitalize;
+  background-color: black;
+  color: white;
+}
+.cal-day-names {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+.cal-day-name {
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  background-color: lightyellow;
+}
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+.cal-day {
+  aspect-ratio: 4/3;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  background-color: white;
+  border: 1px solid black;
+  border-right: 1px solid transparent;
+  margin-top: -1px;
+  margin-left: -1px;
+
+  &--selected {
+    background-color: lightskyblue;
+  }
+  &--preselected {
+    background-color: lightcyan;
+  }
+}

@@ -5,63 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script defer src="./dist/index.js"></script>
+    <link rel="stylesheet" href="./dist/styles.css" />
   </head>
   <body>
+    <input type="text" name="dates" />
     <div id="cal"></div>
-    <style>
-      body {
-        margin: 0;
-        font-family: sans-serif;
-      }
-      #cal {
-        display: grid;
-        grid-gap: 1rem;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-        padding: 1rem;
-      }
-      .cal-month {
-        border: 1px solid black;
-      }
-      .cal-month-name {
-        padding: 0.5rem;
-        text-align: center;
-        font-weight: bold;
-        text-transform: capitalize;
-        background-color: black;
-        color: white;
-      }
-      .cal-day-names {
-        display: grid;
-        grid-template-columns: repeat(7, minmax(0, 1fr));
-      }
-      .cal-day-name {
-        padding: 0.5rem;
-        text-align: center;
-        font-size: 0.8rem;
-        background-color: lightyellow;
-        border: 1px solid black;
-      }
-      .cal-grid {
-        display: grid;
-        grid-template-columns: repeat(7, minmax(0, 1fr));
-        grid-gap: 1px;
-        background-color: black;
-      }
-      .cal-day {
-        aspect-ratio: 4/3;
-        display: flex;
-        justify-content: flex-end;
-        padding: 0.5rem;
-        font-size: 0.8rem;
-        background-color: white;
-      }
-      .cal-day--selected {
-        background-color: lightskyblue;
-      }
-      .cal-day--preselected {
-        background-color: lightcyan;
-      }
-    </style>
+
+    <script src="./dist/index.js"></script>
+    <script>
+      const selectedDates = new Set(['2023-03-01', '2023-03-02', '2023-03-03'])
+
+      const calendar = new Calendar({
+        containerElement: document.querySelector('#cal'),
+        inputElement: document.querySelector('[name="dates"]'),
+        numberOfMonths: 12,
+        selectedDates: selectedDates
+      })
+    </script>
   </body>
 </html>
