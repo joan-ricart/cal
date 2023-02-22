@@ -60,4 +60,14 @@
   &--preselected {
     background-color: var(--cal-preselected);
   }
+
+  &--today {
+    color: red;
+    font-weight: bold;
+  }
+
+  &--disabled {
+    color: var(--cal-lightgray);
+    pointer-events: none;
+  }
 }
