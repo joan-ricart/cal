@@ -149,6 +149,7 @@ class Calendar {
       const calDayEl = document.createElement('div')
       calDayEl.classList.add('cal-day')
       calDayEl.innerHTML = calDay.date.getDate().toString()
+      let date = calDay.date.toISOString().split('T')[0]
 
       if (calDay.today) {
         calDayEl.classList.add('cal-day--today')
@@ -163,9 +164,8 @@ class Calendar {
         calDayEl.classList.add('cal-day--last')
       }
 
-      console.log(calDay.date, today)
       if (calDay.date.setHours(0, 0, 0, 0) >= today.setHours(0, 0, 0, 0)) {
-        calDayEl.dataset.date = calDay.date.toISOString().split('T')[0]
+        calDayEl.dataset.date = date
       } else {
         calDayEl.classList.add('cal-day--disabled')
       }
