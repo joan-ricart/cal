@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently \"pnpm run tsc-watch\" \"pnpm run sass-watch\"",
+    "dev": "concurrently \"npm run tsc-watch\" \"npm run sass-watch\"",
     "tsc-watch": "npx tsc --watch",
     "sass-watch": "npx sass ./src/styles.scss ./dist/styles.css --watch --poll"
   },

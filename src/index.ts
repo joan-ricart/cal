@@ -86,6 +86,8 @@ class Calendar {
       end: ''
     }
 
+    this.containerElement.classList.add('cals-grid')
+
     this.renderCalendars(this.numberOfMonths)
 
     if (this.selectedDates.size > 0) {
@@ -94,6 +96,8 @@ class Calendar {
         day?.classList.add('cal-day--selected')
       })
     }
+
+    this.updateInputElement()
   }
 
   renderCalendars(num: number) {
@@ -199,7 +203,7 @@ class Calendar {
       })
       this.getCalendarDaysInBetween(this.dateRange.start, this.dateRange.end)
 
-      this.inputElement.value = this.getSelectedDates().join(',')
+      this.updateInputElement()
       return
     }
 
@@ -211,7 +215,7 @@ class Calendar {
       target.classList.add('cal-day--selected')
     }
 
-    this.inputElement.value = this.getSelectedDates().join(',')
+    this.updateInputElement()
   }
 
   getCalendarDaysInBetween(startDate: string, endDate: string) {
@@ -244,5 +248,9 @@ class Calendar {
 
   getSelectedDates() {
     return [...this.selectedDates].sort()
+  }
+
+  updateInputElement() {
+    this.inputElement.value = this.getSelectedDates().join(',')
   }
 }
