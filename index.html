@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./dist/styles.css" />
-  </head>
-  <body>
-    <input type="text" name="dates" />
-    <div id="cal"></div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./dist/styles.css" />
+    </head>
+    <body>
+        <input type="text" name="dates" />
+        <div id="cal"></div>
 
-    <script src="./dist/index.js"></script>
-    <script>
-      const selectedDates = new Set(['2023-03-01', '2023-03-02', '2023-03-03'])
+        <script src="./dist/index.js"></script>
+        <script>
+            const selectedDates = new Set()
 
-      const calendar = new Calendar({
-        containerElement: document.querySelector('#cal'),
-        inputElement: document.querySelector('[name="dates"]'),
-        numberOfMonths: 12,
-        selectedDates: selectedDates
-      })
-    </script>
-  </body>
+            const calendar = new Calendar({
+                containerElement: document.querySelector('#cal'),
+                inputElement: document.querySelector('[name="dates"]'),
+                numberOfMonths: 12,
+                selectedDates: selectedDates
+            })
+        </script>
+    </body>
 </html>

@@ -1,73 +1,77 @@
 :root {
-  --cal-black: #000;
-  --cal-gray: #bbbbbb;
-  --cal-lightgray: #f7f7f7;
-  --cal-white: #fff;
-  --cal-selected: #b9d7ea;
-  --cal-preselected: #d6e6f2;
+    --cal-black: #000;
+    --cal-gray: #bbbbbb;
+    --cal-lightgray: #f7f7f7;
+    --cal-white: #fff;
+    --cal-selected: #b9d7ea;
+    --cal-preselecting: #ffffbc;
+    --cal-deleting: #ffc9c9;
 }
 
 .cals-grid {
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 .cal-month {
-  border: 1px solid var(--cal-gray);
-  background-color: var(--cal-lightgray);
+    border: 1px solid var(--cal-gray);
+    background-color: var(--cal-lightgray);
 }
 .cal-month-name {
-  padding: 0.5rem;
-  text-align: center;
-  font-weight: bold;
-  text-transform: capitalize;
-  background-color: var(--cal-black);
-  color: var(--cal-white);
+    padding: 0.5rem;
+    text-align: center;
+    font-weight: bold;
+    text-transform: capitalize;
+    background-color: var(--cal-black);
+    color: var(--cal-white);
 }
 .cal-day-names {
-  display: grid;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
 }
 .cal-day-name {
-  padding: 0.5rem;
-  text-align: center;
-  font-size: 0.8rem;
-  background-color: var(--cal-white);
-  border-bottom: 1px solid var(--cal-gray);
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 0.8rem;
+    background-color: var(--cal-white);
+    border-bottom: 1px solid var(--cal-gray);
 
-  &:last-child {
-    border-right: none;
-  }
+    &:last-child {
+        border-right: none;
+    }
 }
 .cal-grid {
-  display: grid;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
 }
 .cal-day {
-  aspect-ratio: 4/3;
-  display: flex;
-  justify-content: flex-end;
-  padding: 0.5rem;
-  font-size: 0.8rem;
-  background-color: white;
-  outline: 1px solid var(--cal-gray);
+    aspect-ratio: 4/3;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    background-color: white;
+    outline: 1px solid var(--cal-gray);
 
-  &--selected {
-    // color: var(--cal-white);
-    // outline: 1px solid var(--cal-white);
-    background-color: var(--cal-selected);
-  }
-  &--preselected {
-    background-color: var(--cal-preselected);
-  }
+    &--selected {
+        background-color: var(--cal-selected);
+    }
 
-  &--today {
-    color: red;
-    font-weight: bold;
-  }
+    &--preselecting {
+        background-color: var(--cal-preselecting);
+    }
 
-  &--disabled {
-    color: var(--cal-lightgray);
-    pointer-events: none;
-  }
+    &--deleting {
+        background-color: var(--cal-deleting);
+    }
+
+    &--today {
+        color: red;
+        font-weight: bold;
+    }
+
+    &--disabled {
+        color: var(--cal-lightgray);
+        pointer-events: none;
+    }
 }
