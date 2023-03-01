@@ -11,7 +11,7 @@
 .cals-grid {
     display: grid;
     grid-gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 .cal-month {
     border: 1px solid var(--cal-gray);
@@ -30,9 +30,9 @@
     grid-template-columns: repeat(7, minmax(0, 1fr));
 }
 .cal-day-name {
-    padding: 0.5rem;
+    padding: 0.25rem 0.1rem;
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     background-color: var(--cal-white);
     border-bottom: 1px solid var(--cal-gray);
 
